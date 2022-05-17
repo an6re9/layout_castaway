@@ -1,0 +1,424 @@
+@media (max-width: 1440px) {
+  .home-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px 0px 0px 30px;
+  }
+
+  .home-title {
+    font-size: 66px;
+    margin-bottom: 50px;
+  }
+
+  .title-bold {
+    font-size: 66px;
+  }
+
+  .arrow {
+    width: 90px;
+    height: 90px;
+    background-size: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrap {
+    padding: 0 30px 50px;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  .home-title {
+    font-size: 58px;
+    margin-bottom: 40px;
+  }
+
+  .title-bold {
+    font-size: 62px;
+  }
+
+  .episodes-item {
+    padding: 28px;
+  }
+
+  .episodes-text {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 20px;
+  }
+
+  .episodes-text > * {
+    margin-bottom: 0;
+  }
+
+  .episodes-description {
+    font-size: 19px;
+  }
+
+  .about-text {
+    padding-right: 30px;
+  }
+
+  .arrow {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 960px) {
+  .wrap {
+    padding: 30px 10px 0;
+  }
+
+  .logo {
+    margin-left: 0;
+    width: 100px;
+    height: 20px;
+  }
+
+  .home-title {
+    font-size: 56px;
+    margin-bottom: 34px;
+  }
+
+  .title-bold {
+    font-size: 60px;
+  }
+
+  .episodes-item {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 22px;
+    padding: 28px;
+    overflow: hidden;
+    background: none;
+  }
+
+  .episode-img {
+    position: absolute;
+    z-index: -11;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+  }
+
+  .episodes-text {
+    padding: 80px 40px 20px;
+  }
+
+  .episodes-text > * {
+    margin-bottom: 14px;
+  }
+
+  .about-text {
+    padding-right: 10px;
+  }
+
+  .about-title {
+    font-size: 54px;
+    margin-bottom: 15px;
+  }
+
+  .about-bottom {
+    font-size: 16px;
+  }
+
+  .about-bottom p:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  #subscribe-form {
+    width: 48%;
+  }
+
+  .subscribe-email,
+  .subscribe-name {
+    padding: 16px 15px;
+    font-size: 20px;
+  }
+
+  .decore-wrap .decore-subscribe {
+    left: -0.5%;
+  }
+
+  .review-item {
+    padding: 30px;
+  }
+
+  .review-text {
+    font-size: 24px;
+  }
+
+  .review-author {
+    font-size: 20px;
+  }
+
+  .wrap-footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo menu" "streaming menu";
+  }
+}
+
+@media (max-width: 720px) {
+  .header-menu__item {
+    margin: 0 10px;
+  }
+
+  .header-menu__item a {
+    font-size: 14px;
+  }
+
+  .home-content {
+    padding: 15px 0px 0px 20px;
+  }
+
+  .home-title {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+
+  .title-bold {
+    font-size: 38px;
+  }
+
+  .social a:not(last-child) {
+    margin-right: 14px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .button {
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 10px 10px;
+  }
+
+  .about-wrap {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "top" "img" "bottom";
+  }
+
+  .about-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+
+  .about-meet {
+    margin-bottom: 20px;
+  }
+
+  .about-title {
+    font-size: 40px;
+  }
+
+  .about-bottom {
+    font-size: 18px;
+    padding: 30px 10px 10px;
+  }
+
+  .subscribe-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .subscribe-title {
+    margin-bottom: 20px;
+  }
+
+  #subscribe-form {
+    width: 100%;
+  }
+
+  .decore-wrap .decore-subscribe {
+    bottom: -2.5%;
+  }
+
+  .review-item {
+    max-width: none;
+    width: 49.47917%;
+    padding: 30px;
+  }
+
+  .review-item:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+
+  .review-item:not(:nth-child(even)) {
+    margin-right: 1.04166%;
+  }
+
+  .review-text {
+    font-size: 20px;
+  }
+
+  .review-author {
+    font-size: 18px;
+  }
+
+  .wrap-footer {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "menu" "streaming";
+    justify-items: center;
+    row-gap: 15px;
+  }
+
+  .footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .other-links {
+    text-align: end;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap-header {
+    height: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 159px;
+    height: 32px;
+  }
+
+  .header-menu__item {
+    margin: 0 10px;
+  }
+
+  .header-menu__item a {
+    font-size: 14px;
+  }
+
+  .home-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .home-wrap > * {
+    max-width: 100%;
+  }
+
+  .home-content {
+    padding: 20px 0px 30px;
+  }
+
+  .episodes-text {
+    padding: 70px 15px 20px;
+  }
+
+  .about-text {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about-text > * {
+    width: 100%;
+  }
+
+  .about-meet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 0 0;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .about-img {
+    margin-bottom: 15px;
+  }
+
+  .about-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+  .about-bottom {
+    padding: 0;
+  }
+
+  .subscribe-container {
+    padding: 20px;
+  }
+
+  .review-item {
+    max-width: 100%;
+    width: 100%;
+    padding: 35px;
+    margin-right: 0;
+  }
+
+  .review-item:not(:nth-child(even)) {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,410 @@
+// 1440px
+@media (max-width: 1440px) {
+  // home
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0px 0px 30px;
+  }
+  .home-title {
+    font-size: 66px;
+    margin-bottom: 50px;
+  }
+  .title-bold {
+    font-size: 66px;
+  }
+  // home
+  // about
+  .arrow {
+    width: 90px;
+    height: 90px;
+    background-size: 50%;
+  }
+  // about
+}
+// 1440px
+// 1200px
+@media (max-width: 1200px) {
+  .wrap {
+    padding: 0 30px 50px;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  // home
+
+  .home-title {
+    font-size: 58px;
+    margin-bottom: 40px;
+  }
+  .title-bold {
+    font-size: 62px;
+  }
+  // home
+  // episodes
+  .episodes-item {
+    padding: 28px;
+  }
+  .episodes-text {
+    justify-content: space-between;
+    padding-left: 20px;
+  }
+  .episodes-text > * {
+    margin-bottom: 0;
+  }
+  .episodes-description {
+    font-size: 19px;
+  }
+  // episodes
+  // about
+  .about-text {
+    padding-right: 30px;
+  }
+  .arrow {
+    width: 60px;
+    height: 60px;
+  }
+  // about
+}
+// 1200px
+// 960px
+@media (max-width: 960px) {
+  .wrap {
+    padding: 30px 10px 0;
+  }
+  .logo {
+    margin-left: 0;
+    width: 100px;
+    height: 20px;
+  }
+  // home
+
+  .home-title {
+    font-size: 56px;
+    margin-bottom: 34px;
+  }
+  .title-bold {
+    font-size: 60px;
+  }
+  // home
+  // episodes
+  .episodes-item {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 22px;
+    padding: 28px;
+    overflow: hidden;
+    background: none;
+  }
+  .episode-img {
+    position: absolute;
+    z-index: -11;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+  }
+
+  .episodes-text {
+    padding: 80px 40px 20px;
+  }
+  .episodes-text > * {
+    margin-bottom: 14px;
+  }
+  // episodes
+  // about
+  .about-wrap {
+  }
+
+  .about-text {
+    padding-right: 10px;
+  }
+  .about-img {
+  }
+  .about-title {
+    font-size: 54px;
+    margin-bottom: 15px;
+  }
+  .about-bottom {
+    font-size: 16px;
+  }
+  .about-bottom p:not(:last-of-type) {
+    //last-child почему-то отказался работать
+    margin-bottom: 10px;
+  }
+  // about
+  // subscribe
+  #subscribe-form {
+    width: 48%;
+  }
+  .subscribe-email,
+  .subscribe-name {
+    padding: 16px 15px;
+    font-size: 20px;
+  }
+  .decore-wrap .decore-subscribe {
+    left: -0.5%;
+  }
+  // subscribe
+  //review
+  .review-wrap {
+  }
+
+  .review-item {
+    padding: 30px;
+  }
+
+  .review-text {
+    font-size: 24px;
+  }
+  .review-author {
+    font-size: 20px;
+  }
+  //review
+  //footer
+  .wrap-footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "logo menu"
+      "streaming menu";
+  }
+  //footer
+}
+// 960px
+// 720px
+@media (max-width: 720px) {
+  // header
+  .header-menu {
+    // .header-menu__item
+
+    &__item {
+      margin: 0 10px;
+    }
+
+    &__item a {
+      font-size: 14px;
+    }
+  }
+  // header
+  // home
+  .home-content {
+    padding: 15px 0px 0px 20px;
+  }
+  .home-title {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  .title-bold {
+    font-size: 38px;
+  }
+  .social a:not(last-child) {
+    margin-right: 14px;
+    width: 28px;
+    height: 28px;
+  }
+  // home
+  // episodes
+  .title {
+    font-size: 36px;
+  }
+  .button {
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 10px 10px;
+  }
+  // episodes
+  // about
+  .about-wrap {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "top"
+      "img"
+      "bottom";
+  }
+
+  .about-text {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .about-top {
+    // display: flex;
+    // justify-content: flex-end;
+    // flex-direction: column;
+  }
+  .about-meet {
+    margin-bottom: 20px;
+  }
+  .about-title {
+    font-size: 40px;
+  }
+  .about-bottom {
+    font-size: 18px;
+    padding: 30px 10px 10px;
+  }
+  // about
+  // subscribe
+  .subscribe-container {
+    flex-direction: column;
+  }
+  .subscribe-title {
+    margin-bottom: 20px;
+  }
+  #subscribe-form {
+    width: 100%;
+  }
+  .decore-wrap .decore-subscribe {
+    bottom: -2.5%;
+  }
+  // subscribe
+  //review
+
+  .review-item {
+    max-width: none;
+    width: 49.47917%;
+    padding: 30px;
+  }
+
+  .review-item:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+  .review-item:not(:nth-child(even)) {
+    margin-right: 1.04166%;
+  }
+
+  .review-text {
+    font-size: 20px;
+  }
+  .review-author {
+    font-size: 18px;
+  }
+  //review
+  //footer
+  .wrap-footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "menu"
+      "streaming";
+    justify-items: center;
+    row-gap: 15px;
+  }
+  .footer-social {
+    display: flex;
+    justify-content: space-between;
+  }
+  .other-links {
+    text-align: end;
+  }
+  //footer
+}
+// 720px
+// 480px
+@media (max-width: 480px) {
+  .wrap-header {
+    height: auto;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .logo {
+    width: 159px;
+    height: 32px;
+  }
+  .header-menu {
+    // .header-menu__item
+
+    &__item {
+      margin: 0 10px;
+    }
+
+    &__item a {
+      font-size: 14px;
+    }
+  }
+  // header
+  // home
+  .home-wrap {
+    flex-direction: column;
+
+    // padding-top: 40px;
+    // padding-bottom: 46px;
+  }
+  .home-wrap > * {
+    max-width: 100%;
+  }
+  .home-content {
+    padding: 20px 0px 30px;
+  }
+  // home
+  // episodes
+  .episodes-text {
+    padding: 70px 15px 20px;
+  }
+  // episodes
+  // about
+  .about-text {
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  .about-text > * {
+    width: 100%;
+  }
+
+  .about-meet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 0 0;
+  }
+  .subtitle {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .about-img {
+    margin-bottom: 15px;
+  }
+
+  .about-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .about-bottom {
+    padding: 0;
+  }
+  // about
+  // subscribe
+  .subscribe-container {
+    padding: 20px;
+  }
+
+  // subscribe
+  // review
+  .review-item {
+    max-width: 100%;
+    width: 100%;
+    padding: 35px;
+    margin-right: 0;
+  }
+  .review-item:not(:nth-child(even)) {
+    margin-right: 0;
+  }
+  // review
+}
