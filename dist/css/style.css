@@ -140,7 +140,7 @@ a {
 .decore__underline:before {
   content: "";
   position: absolute;
-  background-image: url("/img/content/decore-underline.svg");
+  background-image: url("../img/content/decore-underline.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
