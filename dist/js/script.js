@@ -1,51 +1,78 @@
-// alert("is working!");
+window.onload = () => {
+  scrollMenu();
+};
 
-// перекидываем из одного блока в другой картинку внутри about
-/* window.onload = function () {
-  function shift(toShift, insertAfter, width) {
-    toShift = document.querySelector(toShift);
-    insertAfter = document.querySelector(insertAfter);
-    const parent = insertAfter.parentNode;
-    let currentWidth = parent.clientWidth;
+/*   прокрутка из меню до нужного блока
+  и определение активной ссылки при скролле */
 
-    if (currentWidth < width) {
-      insertAfter.after(toShift);
-      console.log(parent);
+function scrollMenu() {
+  const menuItems = Array.from(document.querySelectorAll("[data-link]"));
+  const blocks = Array.from(document.querySelectorAll("[data-anchor]"));
+  const header = document.querySelector(".header");
+  const active = "active";
+  let isScrolling;
+
+  headerScrolling();
+
+  window.addEventListener("scroll", (e) => {
+    clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+      makeLinkAktiveByScroll();
+      headerScrolling();
+    }, 100);
+  });
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", makeLinkActiveByClick);
+    item.addEventListener("click", moveToAnchor);
+  });
+
+  function makeLinkActiveByClick(e) {
+    menuItems.forEach((item) => item.classList.remove(active));
+    e.target.classList.add(active);
+  }
+
+  function moveToAnchor(e) {
+    const anchor = e.target.dataset.link;
+    const anchorTop =
+      document.querySelector(`.${anchor}`).getBoundingClientRect().top +
+      1 +
+      scrollY;
+
+    window.scrollTo({
+      top: anchorTop - compHeaderHeight(),
+      behavior: "smooth",
+    });
+  }
+
+  function makeLinkAktiveByScroll() {
+    let activeBlock = blocks.find(
+      (block) =>
+        block.getBoundingClientRect().top - compHeaderHeight() <= 0 &&
+        block.getBoundingClientRect().bottom - compHeaderHeight() > 0
+    );
+    if (activeBlock) {
+      let activeItem = menuItems.find(
+        (item) => item.dataset.link === activeBlock.dataset.anchor
+      );
+
+      menuItems.forEach((item) => item.classList.remove(active));
+      if (activeItem) activeItem.classList.add(active);
     } else {
-      parent.append(toShift);
+      menuItems.forEach((item) => item.classList.remove(active));
     }
   }
-  shift("._toShift", "._insertAfter", 960);
-}; */
-/*
 
-/* 
-по специальному классу нахожу элемент, в рамках его родителя нахожу
-
-0) если происходит ресайз или экран 960
-1) нахожу все элементы с классом _toShift 
-2) для каждого из них нахожу родителя
-3) в родителе ищу элемент с классом _insertAfter
-4)вставляю элемент _toShift 
-5) иначе parent.append(_toShift );
-*/
-/*  
-function shift(toShift, insertAfter, width) {
-  toShift = document.querySelector(toShift);
-  insertAfter = document.querySelector(insertAfter);
-  const parent = insertAfter.parentNode;
-  let currentWidth = parent.clientWidth;
-
-  if (currentWidth < width) {
-    console.log(parent.clientWidth + " " + parent);
-    parent.insertBefore(toShift, insertAfter);
-  } else {
-    parent.append(toShift);
-    console.log(parent);
+  function compHeaderHeight() {
+    return header.getBoundingClientRect().height;
+  }
+  function headerScrolling() {
+    if (window.pageYOffset > compHeaderHeight()) {
+      header.classList.add("header_scroll");
+      document.body.style.paddingTop = compHeaderHeight() + "px";
+    } else {
+      header.classList.remove("header_scroll");
+      document.body.style.paddingTop = "0";
+    }
   }
 }
-
-window.onresize = function () {
-  shift(".about-img", ".about-bottom", 720);
-  shift(".footer-column__streaming", ".footer-menu", 960);
-}; */

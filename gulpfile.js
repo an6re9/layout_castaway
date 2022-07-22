@@ -104,7 +104,7 @@ function css() {
 }
 
 function js() {
-  return src(path.src.js)
+  return src(path.src.js, { sourcemaps: true })
     .pipe(fileInclude())
     .pipe(dest(path.build.js))
     .pipe(uglify())
@@ -113,7 +113,7 @@ function js() {
         extname: ".min.js",
       })
     )
-    .pipe(dest(path.build.js))
+    .pipe(dest(path.build.js, { sourcemaps: true }))
     .pipe(browsersync.stream());
 }
 /*
